@@ -71,6 +71,7 @@ class MysqlStatementImpl extends GenericStatementImpl{
 				assert(is_bool($value));
 				return $value ? "1" : "0";
 
+			case "integer":
 			case GenericVariable::TYPE_INT:
 				assert(is_int($value));
 				return (string) $value;
